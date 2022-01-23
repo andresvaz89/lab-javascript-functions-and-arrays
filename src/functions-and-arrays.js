@@ -90,12 +90,19 @@ const wordsUnique = [
 ];
 
 function uniquifyArray(wordsUnique) {
+  let newArr = [];
   if (wordsUnique.length === 0) {
     return null;
   }
+  for (let i of wordsUnique) {
+    if (newArr.indexOf(i) === -1) {
+      newArr.push(i);
+    }
+  }
+  return newArr;
 }
 
-// Iteration #6: Find elements
+// Iteration #6: Fincd d elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 let givenArr;
 function doesWordExist(wordsFind, givenArr) {
